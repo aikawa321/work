@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 	get '/top'=>'root#top'
 	post '/posts' => 'posts#create'
 
-	get '/posts' => 'post#index'
+	get '/posts' => 'posts#index'
+	get '/posts/:id' =>'posts#show', as: 'post'
+	#/posts/1や/posts/3に該当する
 end
